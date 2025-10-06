@@ -1,0 +1,12 @@
+#!/bin/bash
+
+apt install openjdk-17-jdk openjdk-17-jre -y
+java --version
+wget -p -O - https://pkg.jenkins.io/debian/jenkins.io.key | apt-key add -
+sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5BA31D57EF5975CA
+apt-get update
+apt install jenkins -y
+systemctl start jenkins
+systemctl enable jenkins
+ufw allow 8080
