@@ -1,0 +1,380 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[14pt,oneside,A4paper,openright]{report}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{theorem,amsmath,amssymb,latexsym,amscd,amsxtra}
+\usepackage{theorem,amsmath,amssymb,latexsym,amscd,amsxtra,graphicx,graphpap}
+\usepackage{mathtools}
+\usepackage{pb-diagram}
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{indentfirst}
+\usepackage{caption}
+%\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{picinpar,floatflt}
+\usepackage{ makecell}
+\usepackage{longtable}
+\usepackage{fancybox}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[utf8]{vietnam}
+\usepackage[tight,vietnam]{minitoc}
+\usepackage{anyfontsize}
+\usepackage{xpatch}
+\usepackage[unicode]{hyperref} % Hỗ trợ nhấp chuột vào trích dẫn
+\usepackage{fancyhdr}
+\usepackage[left=3.5cm,right=2.0cm,top=3.5cm,bottom=3.0cm, a4paper]{geometry}
+%\usepackage{commath}
+%==================================
+\usepackage{titletoc}
+%==================================
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{unsrt}
+%==================================
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\theoremstyle{plain}
+\newcommand{\eproof}{\hfill $\square$}
+%\newcommand{\eproof}{\hfill}
+\newcommand{\chm}{{\bf Chứng minh.}}
+\newenvironment{cm}{\chm}{\eproof}
+%===============================
+\newtheorem{theorem}{Định lý}[section]
+\newtheorem{corollary}[theorem]{Hệ quả}
+\newtheorem{cy}[theorem]{Chú ý} 
+\newtheorem{definition}[theorem]{Định nghĩa}%[section]
+\newtheorem{bd}[theorem]{Bổ đề} 
+\newtheorem{bt}[theorem]{Bài toán}
+\newtheorem{md}[theorem]{Mệnh đề} 
+\newtheorem{remark}[theorem]{Nhận xét} 
+\newtheorem{Bt}[theorem]{Bài toán} 
+\newtheorem{example}[theorem]{Ví dụ} 
+\newtheorem{hq}[theorem]{Hệ quả}
+\newtheorem{kh}[theorem]{Kí hiệu}
+\newtheorem{cor}[theorem]{Hệ quả}
+\newtheorem{dfn}[theorem]{Định nghĩa}%[section]
+\newtheorem{lem}[theorem]{Bổ đề} 
+\newtheorem{prop}[theorem]{Mệnh đề} 
+\newtheorem{dl}[theorem]{Định lý}
+\newtheorem{vd}[theorem]{\bf Ví dụ} 
+\newtheorem{nx}[theorem]{\bf Nhận xét} 
+\newtheorem{dn}[theorem]{\bf Định nghĩa} 
+\newtheorem{tc}[theorem]{\bf Tính chất} 
+\newtheorem{ch}[theorem]{\bf Câu hỏi} 
+\newtheorem{ttt}[theorem]{\bf Thuật toán} 
+\newtheorem{gt}[theorem]{\bf Giả thiết} 
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\oddsidemargin}{0.3cm}     %Lề trái tính từ điểm cách mép giấy 2.54cm
+\setlength{\topmargin}{-1.75cm}          %Lề trên tính từ điểm cách mép giấy 2.54cm
+\setlength{\headsep}{0.75cm}   %Khoang cach tu  Headerline tới Khối chữ
+\textwidth=15.5cm
+\textheight=24.5cm
+\renewcommand{\bibname}{Tài liệu tham khảo}
+\renewcommand{\large}{\fontsize{14pt}{14pt}\selectfont}
+\renewcommand{\Large}{\fontsize{16pt}{16pt}\selectfont}
+\renewcommand{\LARGE}{\fontsize{15pt}{15pt}\selectfont}
+\renewcommand{\th}{\fontsize{18pt}{18pt}\selectfont}
+\makeatletter
+\def\ps@myheadings{
+\def\@evenhead{\hfil\thepage\hfil}
+\def\@oddhead{
+\hfil\thepage\hfil}}
+\makeatother
+\pagestyle{myheadings}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=10pt,
+    backgroundcolor=\color[rgb]{0.95,0.95,0.95}, % Màu nền sáng hơn
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single, % Có khung bao quanh đoạn code
+    rulecolor=\color{black},
+    tabsize=2,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=false,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+}
+
+\lstset{frame=tb,
+  language= Python,
+  basicstyle={\small\ttfamily},
+  aboveskip=3mm,
+  belowskip=3mm,
+  breakatwhitespace=true,
+  breaklines=true,
+  classoffset=0,
+  columns=flexible,
+  commentstyle={\color{dkgreen}, morecomment=[l]{\#}},
+  framexleftmargin=0.25em,
+  frameshape={}{}{}{},
+  keywordstyle=\color{blue},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  showstringspaces=false,
+  stringstyle=\color{mauve},
+  tabsize=3,
+  xleftmargin=1em,
+}
+\newenvironment{proof}{\paragraph{Chứng minh:}}{\hfill$\square$}
+\newenvironment{myproof}[2] {\paragraph{Proof of {#1} {#2} :}}{\hfill$\square$}
+\DeclarePairedDelimiter{\pro}{\langle}{\rangle}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\makeatletter
+\AtBeginDocument{\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}}
+
+\fontsize{22pt}{16pt}\selectfont
+\begin{document}
+\setcounter{page}{1}%
+\pagenumbering{roman}
+
+\pagenumbering{gobble}
+\begin{center}
+\Large
+{\bf ĐẠI HỌC BÁCH KHOA HÀ NỘI}\\
+{\bf KHOA TOÁN - TIN}
+\centerline{--------------------o0o--------------------}  
+\end{center}
+\vspace{0.3cm}
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.6]{dhbkhn.png}\\
+\end{center}
+\end{figure}
+\begin{center}
+\fontsize{21pt}{17pt}\selectfont
+\vspace{0.35cm}
+\textbf{ĐỒ ÁN II}\\
+\end{center}
+
+\vspace{0.3cm}
+\begin{center}
+\fontsize{17pt}{16pt}\selectfont
+
+\bf NGHIÊN CỨU VÀ TRIỂN KHAI QUY TRÌNH CI/CD TRÊN NHIỀU NỀN TẢNG
+
+\end{center}
+\vspace{0.3cm}
+ \begin{center}
+	\fontsize{15pt}{16pt}\selectfont 	
+	{\bf Chuyên ngành: TOÁN TIN}\\	
+\end{center}
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{l l}
+\fontsize{13pt}{14pt} \selectfont
+Giảng viên hướng dẫn:&\fontsize{13pt}{14pt}{\bf  TS. NGÔ QUỐC HOÀN}\quad $_{\overline{\text{Chữ kí của GVHD}}}$\\[0.5cm]
+
+\fontsize{13pt}{14pt} \selectfont Sinh viên thực hiện:&\fontsize{13pt}{14pt}{\bf TRẦN XUÂN SƠN}\\[0.5cm]
+
+\fontsize{13pt}{14pt} \selectfont {MSSV:}& \fontsize{13pt}{14pt}{\bf 20227149}\\
+\end{tabular}
+
+\end{center}
+\vspace{2cm}
+\begin{center}
+\LARGE HÀ NỘI, 10/2025
+\end{center}
+\newpage
+\begin{center}
+\fontsize{17pt}{16pt}\selectfont
+%\textbf{ĐỒ ÁN TỐT NGHIỆP}\\
+\textbf{ĐỒ ÁN II}\\
+\end{center}
+ \begin{center}
+ \vspace{1cm}
+\large \bf  Chuyên ngành: Toán Tin\\
+\vspace{0.5cm}
+%\large	Chuyên sâu: Các phương pháp tối ưu\\
+\end{center}
+
+\vspace{3cm}
+\begin{center}
+\fontsize{17pt}{16pt}\selectfont
+
+\bf  NGHIÊN CỨU VÀ TRIỂN KHAI QUY TRÌNH CI/CD TRÊN NHIỀU NỀN TẢNG
+
+\end{center}
+
+\vspace{3cm}
+\begin{center}
+\begin{tabular}{l l}
+Giảng viên hướng dẫn:&{\bf  TS. NGÔ QUỐC HOÀN}\\[0.5cm]
+Họ và tên sinh viên:&{\bf TRẦN XUÂN SƠN}\\[0.5cm]
+Mã số sinh viên:&{\bf 20227149}\\[0.5cm]
+Lớp:&{\bf      Toán - Tin 02 - K67}
+\end{tabular}
+
+\end{center}
+\vspace{4cm}
+\begin{center}
+\LARGE HÀ NỘI, 10/2025
+\end{center}
+
+\large
+
+\newpage
+
+\newpage
+\thispagestyle{empty}
+\thisfancypage{
+	\setlength{\fboxsep}{0cm}
+	\fbox}{}
+
+\fontsize{22pt}{16pt}\selectfont
+\bigbreak
+\begin{center}
+	{\bf Nhận xét của giảng viên hướng dẫn}
+\end{center}
+\bigbreak
+
+\fontsize{12pt}{14pt}\selectfont
+\begin{enumerate}
+	\item [{\bf 1.}]{\bf Mục tiêu và nội dung của đồ án}
+	\begin{enumerate}
+		\item Mục tiêu: 
+		\vspace{40pt}
+		\item Nội dung: 
+		\vspace{40pt}
+	\end{enumerate}
+	\item [{\bf 2.}] {\bf Kết quả đạt được} 
+	\vspace{60pt}
+	\item [{\bf 3.}]{\bf Ý thức làm việc của sinh viên:}
+    \vspace{60pt}
+\end{enumerate}
+
+
+\bigskip 
+\hspace{7cm}
+{\it Hà Nội, ngày .... tháng .... năm ....}
+
+\hspace{7.8cm} {\bf Giảng viên hướng dẫn}
+
+\vspace{2 cm}
+%\hspace{7.6cm} {\bf PGS.TS. Nguyễn Đình Hân}
+
+
+
+\pagestyle{fancy}
+\lhead{ĐỒ ÁN II}
+\cfoot{\fontsize{13pt}{18pt} \selectfont \thepage}
+\newpage
+\begin{center}
+\fontsize{22pt}{16pt}\selectfont
+{\bfseries Lời cảm ơn}
+\fontsize{13pt}{16pt}\selectfont
+\end{center}
+\bigskip
+
+%Lời đầu tiên, em xin được gửi lời cảm ơn đến thầy cô, gia đình và anh chị em bạn bè xung quanh đã giúp đỡ, ủng hộ em trong suốt quá trình làm Đồ án.
+%\bigskip
+%
+%Cùng với đó, em xin gửi lòng biết ơn sâu sắc đến quý thầy cô Khoa Toán - Tin, Đại học Bách khoa Hà Nội đã dùng tri thức và tâm huyết của mình để có thể truyền đạt cho em những kiến thức quan trọng, quý báu.
+%\bigskip
+%
+%Đặc biệt, em xin gửi lời cảm ơn chân thành đến PGS.TS. Nguyễn Đình Hân người đã tận tâm chỉ bảo, hướng dẫn em trong suốt thời gian làm Đồ án vừa qua. Không chỉ hướng dẫn Đồ án, cô còn là người định hướng con đường học thuật, tạo động lực cho em cố gắng theo đuổi lĩnh vực này.
+%\bigskip
+%
+%Trong quá trình làm Đồ án không thể tránh khỏi những thiếu sót, em rất mong nhận được những ý kiến góp ý của Thầy Cô để Đồ án của em được hoàn thiện hơn.
+%\bigskip
+%\\
+%Em xin chân thành cảm ơn!!
+
+%\begin{minipage}{0.5\textwidth}
+%\end{minipage}
+%\hspace{0.5\textwidth}
+%\begin{minipage}{0.5\textwidth}
+%	\noindent\begin{center}
+%		\vspace{1cm}
+%		\textit{Hà Nội,ngày 13 tháng 6  năm 2025} \\
+%		Tác giả đồ án\\ \vspace{2cm}
+%		\textbf{Bùi Anh Tú}
+%	\end{center}	
+%\end{minipage}
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[width=1\textwidth]{Ảnh/ĐG1.png}
+%\end{figure}
+%    \includegraphics[width=1\textwidth]{Ảnh/ĐG2.png}
+\tableofcontents 
+\pagestyle{myheadings}
+
+
+
+\newpage
+
+
+\thispagestyle{empty}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\newpage
+\addcontentsline{toc}{chapter}{\bfseries Danh sách bảng}
+\listoftables
+%\thispagestyle{empty}
+\newpage
+\addcontentsline{toc}{chapter}{\bfseries Danh sách hình vẽ}
+\listoffigures
+\large
+
+\fontsize{12pt}{16pt}\selectfont
+
+\pagestyle{fancy}
+\rhead{\leftmark}
+\lhead{ĐỒ ÁN II}
+\cfoot{\fontsize{13pt}{18pt} \selectfont \thepage}
+\chapter*{Ký hiệu và chữ viết tắt}
+\addcontentsline{toc}{chapter}{\bfseries Ký hiệu và chữ viết tắt}
+
+\begin{tabular}{@{\hspace{0.5cm}} l @{\hspace{1cm}} p{12cm}}
+    CI & Continuous Integration \\
+    CD & Continuous Delivery / Continuous Deployment  \\
+    DevOps & Development Operations \\
+    MTTR & Mean Time To Resolution \\
+    RSA & Rivest-Shamir-Adleman \\
+    VMs & Virtual Machines \\
+%    SHA256 & Secure Hash Algorithm 256-bit \\
+%    BFT & Byzantine Fault Tolerance \\
+%    ECDSA & Elliptic Curve Digital Signature Algorithm \\
+%    BFV & Brakerski/Fan-Vercauteren \\
+%    HTTP & Hypertext Transfer Protocol \\
+%    API & Application Programming Interface\\
+%    ML & Machine Learning\\
+%    DPA & Differential Power Analysis\\
+%    EM & Electromagnetic Attack\\
+\end{tabular}
+\input{Modau}
+
+\input{Chapter1}
+
+\input{Chapter2}
+
+\input{Chapter3}
+
+\input{Chapter4.tex}
+
+\input{Chapter5.tex}
+
+\input{Chapter6}\addcontentsline{toc}{chapter}{\bfseries Kết luận và hướng nghiên cứu}
+\bibliographystyle{sami.bst}
+
+\bibliography{ref.bib}
+
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
+\end{document}

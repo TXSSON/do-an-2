@@ -1,0 +1,97 @@
+\chapter{Giới thiệu các nền tảng và ông cụ triển khai CI/CD}
+
+
+\section{Các nền tảng được sử dụng triển khai CI/CD}
+
+Để triển khai một quy trình CI/CD hiệu quả thì có rất nhiều yếu tố phải quan tâm như là: Những tài nguyên hiện có của dự án, kinh nghiệm sử dụng các công cụ của các kỹ sư trong công ty và chi phí để phát triển dự án, ... Và từ những yếu tố khác nhau đó thì mỗi dữ án, mỗi công ty sẽ phải lựa chọn những nền tảng và công cụ phù hợp để xây dựng quy trình CI/CD của mình. Hiện nay, ba nền tảng phổ biến thường được sử dụng là GitHub, GitLab và Jenkins, mỗi nền tảng có đặc điểm và cách tiếp cận riêng, phù hợp với những nhu cầu khác nhau của dự án. 
+
+\subsection{GitHub}
+
+GitHub là nền tảng quản lý mã nguồn phổ biến, nổi bật với sự đơn giản, dễ sử dụng và tích hợp mạnh mẽ với nhiều công cụ bên thứ ba. GitHub hỗ trợ quản lý phiên bản, theo dõi lịch sử thay đổi, và cung cấp môi trường cộng tác trực tuyến, giúp các nhóm phát triển dễ dàng làm việc cùng nhau.
+
+\subsubsection{GitHub Cloud}
+GitHub Cloud là dịch vụ lưu trữ mã nguồn trên đám mây, giúp người dùng truy cập dự án từ bất kỳ đâu mà không cần cài đặt và quản lý server riêng. Nhờ GitHub Cloud, các dự án nhỏ hoặc các nhóm làm việc phân tán có thể triển khai CI/CD nhanh chóng, tận dụng hạ tầng sẵn có của GitHub. Ngoài ra, GitHub Cloud luôn được cập nhật và bảo mật bởi chính đội ngũ GitHub, giúp giảm gánh nặng vận hành cho doanh nghiệp.
+
+\subsubsection{GitHub Actions}
+GitHub Actions là công cụ tích hợp sẵn cho phép tự động hóa workflow CI/CD trực tiếp trên GitHub. Actions cho phép cấu hình các pipeline để tự động build, test, deploy mỗi khi có thay đổi trong kho mã nguồn. GitHub Actions hỗ trợ nhiều môi trường, từ Linux, Windows, macOS đến các container, đồng thời có thư viện hành động (actions) phong phú giúp triển khai nhanh chóng mà không cần viết script phức tạp. Nhờ đó, GitHub trở thành nền tảng CI/CD “all-in-one” tiện lợi cho các dự án vừa và nhỏ.
+
+\subsection{GitLab}
+
+GitLab là nền tảng quản lý mã nguồn toàn diện, nổi bật với khả năng kết hợp quản lý dự án, issue tracking và CI/CD trong cùng một hệ sinh thái. GitLab phù hợp với các tổ chức muốn kiểm soát toàn bộ vòng đời phát triển phần mềm từ một nơi, từ lập kế hoạch, phát triển, kiểm thử đến triển khai.
+
+\subsubsection{GitLab Server}
+GitLab Server có thể được cài đặt trên máy chủ riêng hoặc trên cloud do tổ chức quản lý. Nó cung cấp toàn quyền kiểm soát về bảo mật, truy cập và cấu hình pipeline CI/CD, đồng thời hỗ trợ quản lý các dự án lớn với nhiều nhóm phát triển. GitLab Server đặc biệt phù hợp cho các doanh nghiệp có yêu cầu cao về bảo mật hoặc muốn duy trì dữ liệu nội bộ.
+
+\subsubsection{GitLab Runner}
+GitLab Runner là thành phần thực thi các công việc CI/CD, chịu trách nhiệm build, test và deploy theo pipeline đã cấu hình. Runner có thể được cài đặt trên nhiều máy, giúp phân tán tải và tăng tốc độ xử lý pipeline. GitLab Runner cũng linh hoạt về môi trường triển khai, có thể chạy trong container, máy vật lý hoặc cloud, cho phép tùy chỉnh theo nhu cầu cụ thể của từng dự án. Nhờ vậy, GitLab vừa cung cấp khả năng kiểm soát nội bộ, vừa hỗ trợ tự động hóa CI/CD hiệu quả.
+
+\subsection{Jenkins}
+
+Jenkins là một công cụ tự động hóa mã nguồn mở, nổi bật với khả năng linh hoạt, plugin phong phú và hỗ trợ tích hợp với hầu hết các hệ thống hiện có. Jenkins phù hợp với các dự án cần pipeline CI/CD phức tạp, với nhiều bước kiểm thử, build, deploy và các quy trình tùy chỉnh đặc thù.
+
+\subsubsection{Jenkins Server}
+Jenkins Server là trung tâm quản lý, nơi lưu trữ cấu hình pipeline, trigger build khi có thay đổi trong kho mã nguồn và tổng hợp kết quả thực thi từ các agent. Server chịu trách nhiệm điều phối workflow CI/CD, cung cấp giao diện quản lý trực quan và báo cáo kết quả các pipeline. Jenkins Server thường được cài đặt trên máy chủ riêng hoặc máy chủ cloud, và có thể mở rộng quy mô bằng cách thêm nhiều agent để thực thi pipeline.
+
+\subsubsection{Jenkins Agent}
+Jenkins Agent thực hiện các công việc build, test, deploy theo chỉ định của Jenkins Server. Agent giúp phân tán tải, chạy pipeline trên nhiều môi trường khác nhau, từ Linux, Windows, macOS đến các container. Nhờ Agent, Jenkins có thể xử lý các pipeline phức tạp, hỗ trợ nhiều dự án cùng lúc và tối ưu hiệu suất hệ thống. Cấu trúc Server-Agent của Jenkins cũng cho phép mở rộng linh hoạt, thích hợp cho các dự án lớn hoặc doanh nghiệp có nhiều nhóm phát triển.
+
+\subsection{So sánh ba nền tảng Github, Gitlab, Jenkins}
+
+\begin{itemize}
+	\item GitHub phù hợp với các dự án nhỏ và vừa, ưu điểm là dễ sử dụng, nhanh chóng triển khai CI/CD mà không cần hạ tầng riêng. Tuy nhiên đối với các dự án đòi hỏi tính bảo mật cao thì việc công khai mã nguồn dụ án của mình trên Github cloud là điều thể. Nếu sử dụng các dịch vụ cho doanh nghiệp của Github để triển khai dự án thì chi phí quá cao. Vì vậy, Github phù hợp các dự án nhỏ và không đòi hỏi bảo mật cao.
+	\item GitLab thích hợp với doanh nghiệp muốn kiểm soát toàn bộ vòng đời phát triển, đặc biệt khi cần cài đặt trên server nội bộ. Gitlab hỗ trợ  cài đặt Gitlab server trên máy chủ của công ty tăng tính bảo mật, so với Github thì gitlab cung cấp nhiều bộ công cụ hơn, nhiều tính năng cho dự án lớn. Đây là cũng là công cụ thường được các doanh nghiệp sử dụng.
+	\item Jenkins mạnh về linh hoạt và khả năng mở rộng, phù hợp với các pipeline phức tạp và dự án lớn, nhưng yêu cầu vận hành nhiều hơn. So với 2 nền tảng trước Jenkins là nên tảng mạnh mã nhất về triển khai tự động, cho kỹ sư vận hàng những khả năng tùy biến cao. Tuy không trực tiếp lưu trữ mã nguồn, nhưng với việc tích hợp được nhiều tiện ích đã khiến Jenkins được nhiều công ty lớn tin dùng. Tuy vậy, Jenkins là nền tảng phức tạp đòi hỏi đội ngũ vận hành phải học thêm kỹ năng để sử dụng.
+\end{itemize}
+
+Nhờ những đặc điểm này, việc lựa chọn nền tảng CI/CD phụ thuộc vào quy mô dự án, yêu cầu bảo mật, ngân sách và mức độ phức tạp của pipeline.
+
+\section{Các công cụ và ứng dụng cần thiết khác}
+
+Ngoài các nền tảng CI/CD chính, quá trình triển khai phần mềm còn cần một số công cụ hỗ trợ khác để đảm bảo môi trường phát triển, quản lý server và kiểm soát chất lượng mã nguồn. Các công cụ này giúp tăng tính ổn định, tối ưu hóa hiệu suất và đảm bảo phần mềm luôn đạt chất lượng cao trước khi triển khai.
+
+\subsection{VMware Workstation Pro}
+
+VMware Workstation Pro là phần mềm ảo hóa mạnh mẽ, cho phép tạo và quản lý nhiều máy ảo trên cùng một máy tính vật lý. Trong quá trình phát triển và triển khai CI/CD, VMware Workstation Pro giúp: 
+\begin{itemize} 
+	\item Tạo môi trường thử nghiệm giống hệt môi trường thực tế mà không ảnh hưởng đến máy chủ chính. 
+	\item Chạy nhiều hệ điều hành khác nhau song song, thuận tiện cho việc kiểm thử đa nền tảng. 
+	\item Dễ dàng sao lưu, khôi phục máy ảo, giảm thiểu rủi ro khi triển khai thử nghiệm.
+\end{itemize}
+
+Nhờ VMware Workstation Pro, các nhóm phát triển có thể mô phỏng môi trường triển khai, kiểm tra tính tương thích và đảm bảo các pipeline CI/CD hoạt động ổn định trước khi đưa phần mềm lên server thật.
+
+\subsection{Nginx}
+
+Nginx là một web server và reverse proxy phổ biến, nổi bật với khả năng xử lý lượng lớn kết nối đồng thời và hiệu suất cao. Trong quy trình CI/CD, Nginx thường được sử dụng để: 
+\begin{itemize} 
+	\item Phục vụ ứng dụng web sau khi deploy, đảm bảo tốc độ tải trang nhanh và ổn định. 
+	\item Reverse proxy để điều phối các request đến nhiều server backend khác nhau, hỗ trợ triển khai microservices. 
+	\item Cấu hình SSL/TLS để bảo mật kết nối giữa client và server. 
+\end{itemize}
+
+Nginx giúp đảm bảo rằng các ứng dụng được triển khai thông qua pipeline CI/CD có thể hoạt động mượt mà trong môi trường sản xuất, đồng thời hỗ trợ các chiến lược deploy như blue-green hoặc canary deployment.
+
+\subsection{SonarQube}
+
+SonarQube là công cụ phân tích chất lượng mã nguồn tự động, hỗ trợ phát hiện lỗi, code smells và các vấn đề về bảo mật ngay trong giai đoạn phát triển. Khi tích hợp vào CI/CD, SonarQube giúp: 
+\begin{itemize} 
+	\item Phân tích mã nguồn sau mỗi lần commit hoặc build, đảm bảo chất lượng code được duy trì. 
+	\item Đưa ra báo cáo chi tiết về lỗi tiềm ẩn, các tiêu chuẩn coding và khả năng bảo mật. 
+	\item Hỗ trợ nhiều ngôn ngữ lập trình, dễ dàng tích hợp với các nền tảng CI/CD như GitHub Actions, GitLab CI/CD hay Jenkins. 
+\end{itemize}
+
+Việc sử dụng SonarQube trong pipeline CI/CD giúp nâng cao chất lượng phần mềm, giảm thiểu lỗi sản phẩm và đảm bảo code luôn tuân thủ các chuẩn mực kỹ thuật.
+
+\subsection{Docker}
+
+Docker là nền tảng mã nguồn mở cho phép đóng gói, triển khai và chạy ứng dụng trong các container — môi trường nhẹ, độc lập và nhất quán giữa các hệ thống.  
+Khi tích hợp vào quy trình CI/CD, Docker mang lại nhiều lợi ích quan trọng như:
+
+\begin{itemize}
+	\item Giúp tạo môi trường triển khai đồng nhất giữa các giai đoạn (phát triển, kiểm thử, sản xuất), hạn chế lỗi do khác biệt cấu hình.
+	\item Tăng tốc độ triển khai nhờ cơ chế container hóa, cho phép khởi tạo và hủy môi trường chỉ trong vài giây.
+	\item Dễ dàng tích hợp với các hệ thống CI/CD như Jenkins, GitHub Actions hay GitLab CI/CD để tự động hóa quá trình build và deploy ứng dụng.
+	\item Cho phép quản lý phiên bản của môi trường chạy thông qua Dockerfile, giúp đảm bảo tính tái lập và kiểm soát thay đổi.
+\end{itemize}
+
+Việc sử dụng Docker trong pipeline CI/CD giúp đảm bảo quá trình triển khai nhanh chóng, ổn định và dễ mở rộng, đồng thời giảm thiểu các rủi ro khi triển khai ứng dụng trên nhiều môi trường khác nhau.

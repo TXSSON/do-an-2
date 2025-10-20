@@ -1,0 +1,13 @@
+\addvspace {10\p@ }
+\contentsline {xchapter}{Giới thiệu chung}{7}{chapter.1}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Mô Hình CI/CD}}{8}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Quy trình CI/CD}}{11}{figure.caption.13}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Giới thiệu các nền tảng và ông cụ triển khai CI/CD}{13}{chapter.2}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Xây dựng hệ thống server ảo}{19}{chapter.3}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Xây dựng và triển khai quy trình CI/CD}{20}{chapter.4}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Xây dựng các trường hợp kiểm thử và trình bày kết quả}{21}{chapter.5}%
+\contentsfinish 

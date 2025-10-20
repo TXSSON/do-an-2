@@ -1,0 +1,120 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+I found no \citation commands---while reading file main.aux
+Database file #1: ref.bib
+You're missing a field name---line 2 of file ref.bib
+ : 
+ : %  title={Theory and Implementation},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 12 of file ref.bib
+ : 
+ : %  title={Somewhat Homomorphic Encryption from Linear Homomorphism and Sparse LPN},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 19 of file ref.bib
+ : 
+ : %  title={Homomorphic Encryption},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 27 of file ref.bib
+ : 
+ : %  title={Công nghệ Blockchain là gì? Hoạt động ra sao và có ưu điểm gì?},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 34 of file ref.bib
+ : 
+ : %  title={Homomorphic Encryption},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 42 of file ref.bib
+ : 
+ : %  title={Privacy Preserving Verifiable Federated Learning Scheme using Blockchain and Homomorphic Encryption},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 50 of file ref.bib
+ : 
+ : %  title={Key-Homomorphic Pseudorandom Functions from LWE with a Small Modulus},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 61 of file ref.bib
+ : 
+ : %  title={Homomorphic Encryption Standard},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 70 of file ref.bib
+ : 
+ : %  title={Cryptography and Network Security: Principles and Practice, Global Edition},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 78 of file ref.bib
+ : 
+ : %  title     = {Lecture Notes on Timing Side Channels},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 86 of file ref.bib
+ : 
+ : %  title     = {Differential Power Analysis},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 95 of file ref.bib
+ : 
+ : %  title     = {Cache Based Side-Channel Attacks},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 103 of file ref.bib
+ : 
+ : %  title     = {Electromagnetic Side-Channel Analysis of PRESENT Lightweight Cipher},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 113 of file ref.bib
+ : 
+ : %  title={A Survey of Microarchitectural Side-Channel Vulnerabilities, Attacks and Defenses in Cryptography},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 0 entries,
+            1791 wiz_defined-function locations,
+            445 strings with 3513 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 15 error messages)
